@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmibqd40uid37"]
+
+[ext_resource type="Script" path="res://Menu.gd" id="1_3o8wy"]
+[ext_resource type="Texture2D" uid="uid://c23rh12mphlbe" path="res://Imagenes/Fondo chido.png" id="1_s7oat"]
+[ext_resource type="Texture2D" uid="uid://c4ojenm6fi731" path="res://Imagenes/boton.png" id="3_uwulu"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_3o8wy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(359.5, 644.5)
+scale = Vector2(1.20167, 1.43222)
+texture = ExtResource("1_s7oat")
+
+[node name="Jugar" type="TextureButton" parent="."]
+offset_left = 164.0
+offset_top = 725.0
+offset_right = 564.0
+offset_bottom = 925.0
+texture_normal = ExtResource("3_uwulu")
+
+[connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
