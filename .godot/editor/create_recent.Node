@@ -1,6 +1,13 @@
-Sprite2D
+Label
+Button
+Control
+CanvasLayer
 CollisionShape2D
+Area2D
+Panel
+Sprite2D
+TouchScreenButton
+TextureButton
 CollisionPolygon2D
 CharacterBody2D
-TextureButton
 CheckButton

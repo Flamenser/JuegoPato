@@ -1,4 +1,4 @@
-res://Menu.tscn
-res://Menu.gd
 res://Juego.tscn
-res://Jugador.gd
+res://Letra.tres
+res://Juego.gd
+res://Menu.tscn

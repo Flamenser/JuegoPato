@@ -1,29 +1,86 @@
-[gd_scene load_steps=5 format=3 uid="uid://bykcy5e7xbfri"]
+[gd_scene load_steps=8 format=3 uid="uid://bykcy5e7xbfri"]
 
 [ext_resource type="Texture2D" uid="uid://c23rh12mphlbe" path="res://Imagenes/Fondo chido.png" id="1_7ni0n"]
+[ext_resource type="Script" path="res://Juego.gd" id="1_n34co"]
 [ext_resource type="Script" path="res://Jugador.gd" id="2_7tbpi"]
 [ext_resource type="Texture2D" uid="uid://b3fhpwsgboejj" path="res://Imagenes/patobase.png" id="3_a70dq"]
+[ext_resource type="LabelSettings" uid="uid://4iw2cg58i8fi" path="res://Letra.tres" id="5_sqlut"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n3gy4"]
-size = Vector2(17, 7)
+size = Vector2(27, 13)
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vbxfh"]
+size = Vector2(735.932, 22.9202)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(360.5, 639)
-scale = Vector2(1.205, 1.42)
+[node name="Juego" type="Node2D"]
+script = ExtResource("1_n34co")
+
+[node name="Tap" type="TouchScreenButton" parent="."]
+position = Vector2(369, 771)
+scale = Vector2(8.11616, -15.8164)
+
+[node name="Tap2" type="Sprite2D" parent="."]
+position = Vector2(362, 685)
+scale = Vector2(1.20873, 1.29868)
 texture = ExtResource("1_7ni0n")
 
 [node name="Jugador" type="CharacterBody2D" parent="."]
+position = Vector2(0, 66)
 motion_mode = 1
 script = ExtResource("2_7tbpi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador"]
-position = Vector2(51.5, 38.5)
+position = Vector2(67, 65)
 shape = SubResource("RectangleShape2D_n3gy4")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="SpriteJugador" type="Sprite2D" parent="Jugador"]
-position = Vector2(32, 34)
-scale = Vector2(1.03906, 1.05469)
+position = Vector2(30, 56)
+scale = Vector2(1.8789, 1.90235)
 texture = ExtResource("3_a70dq")
+
+[node name="DeathZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2(363, 1272)
+scale = Vector2(0.986589, -1.23837)
+shape = SubResource("RectangleShape2D_vbxfh")
+
+[node name="MenuPartida" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Control" type="Control" parent="MenuPartida"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Perdiste" type="Label" parent="MenuPartida"]
+offset_left = 302.0
+offset_top = 422.0
+offset_right = 418.0
+offset_bottom = 468.0
+text = "Perdiste :("
+label_settings = ExtResource("5_sqlut")
+horizontal_alignment = 1
+
+[node name="Reinicio" type="Button" parent="MenuPartida"]
+process_mode = 2
+offset_left = 190.0
+offset_top = 486.0
+offset_right = 333.0
+offset_bottom = 547.0
+text = "Reiniciar"
+
+[node name="Menu" type="Button" parent="MenuPartida"]
+process_mode = 2
+offset_left = 380.0
+offset_top = 485.0
+offset_right = 523.0
+offset_bottom = 546.0
+text = "Menú"
+
+[connection signal="pressed" from="Tap" to="Jugador" method="_on_tap_pressed"]
+[connection signal="body_entered" from="DeathZone" to="." method="_on_death_zone_body_entered"]
+[connection signal="pressed" from="MenuPartida/Reinicio" to="." method="_on_reinicio_pressed"]
+[connection signal="pressed" from="MenuPartida/Menu" to="." method="_on_menu_pressed"]
