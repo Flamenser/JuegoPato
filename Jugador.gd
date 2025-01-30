@@ -27,7 +27,7 @@ func _physics_process(delta):
 func reverse_direction():
 	# Cambiar la dirección horizontal
 	direction.x *= -1
-
+	$SpriteJugador.scale.x *= -1
 func _input(event):
 	# Detectar si el jugador toca la pantalla
 	if event is InputEventScreenTouch and event.pressed:

@@ -21,6 +21,7 @@ offset_bottom = 925.0
 texture_normal = ExtResource("3_uwulu")
 
 [node name="Label" type="Label" parent="Jugar"]
+layout_mode = 0
 offset_left = 55.0
 offset_top = 47.0
 offset_right = 357.0
