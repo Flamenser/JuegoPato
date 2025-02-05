@@ -39,6 +39,14 @@ position = Vector2(30, 56)
 scale = Vector2(1.8789, 1.90235)
 texture = ExtResource("3_a70dq")
 
+[node name="DeathZone2" type="Area2D" parent="."]
+position = Vector2(1, -1227)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone2"]
+position = Vector2(363, 1272)
+scale = Vector2(0.986589, -1.23837)
+shape = SubResource("RectangleShape2D_vbxfh")
+
 [node name="DeathZone" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
@@ -81,6 +89,7 @@ offset_bottom = 546.0
 text = "Menú"
 
 [connection signal="pressed" from="Tap" to="Jugador" method="_on_tap_pressed"]
+[connection signal="body_entered" from="DeathZone2" to="." method="_on_death_zone_body_entered"]
 [connection signal="body_entered" from="DeathZone" to="." method="_on_death_zone_body_entered"]
 [connection signal="pressed" from="MenuPartida/Reinicio" to="." method="_on_reinicio_pressed"]
 [connection signal="pressed" from="MenuPartida/Menu" to="." method="_on_menu_pressed"]

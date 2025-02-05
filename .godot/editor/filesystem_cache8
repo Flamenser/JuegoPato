@@ -1,12 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1738284047
+::res://::1738726216
 icon.svg::CompressedTexture2D::8887980079877972278::1738118693::1738118904::1::::<><>::
 Juego.gd::GDScript::-1::1738118693::0::1::::<>Node2D<>::
-Juego.tscn::PackedScene::4091762584950163414::1738199782::0::1::::<><>::uid://c23rh12mphlbe::::res://Imagenes/Fondo chido.png<>res://Juego.gd<>res://Jugador.gd<>uid://b3fhpwsgboejj::::res://Imagenes/patobase.png<>uid://4iw2cg58i8fi::::res://Letra.tres
+Juego.tscn::PackedScene::4091762584950163414::1738284052::0::1::::<><>::uid://c23rh12mphlbe::::res://Imagenes/Fondo chido.png<>res://Juego.gd<>res://Jugador.gd<>uid://b3fhpwsgboejj::::res://Imagenes/patobase.png<>uid://4iw2cg58i8fi::::res://Letra.tres
 Jugador.gd::GDScript::-1::1738119340::0::1::::<>CharacterBody2D<>::
-Letra.tres::LabelSettings::2053375593534753094::1738199781::0::1::::<><>::
+Letra.tres::LabelSettings::2053375593534753094::1738284052::0::1::::<><>::
 Menu.gd::GDScript::-1::1738118693::0::1::::<>Node<>::
-Menu.tscn::PackedScene::3245291322609522372::1738199781::0::1::::<><>::res://Menu.gd<>uid://c23rh12mphlbe::::res://Imagenes/Fondo chido.png<>uid://c4ojenm6fi731::::res://Imagenes/boton.png<>uid://4iw2cg58i8fi::::res://Letra.tres
+Menu.tscn::PackedScene::3245291322609522372::1738284052::0::1::::<><>::res://Menu.gd<>uid://c23rh12mphlbe::::res://Imagenes/Fondo chido.png<>uid://c4ojenm6fi731::::res://Imagenes/boton.png<>uid://4iw2cg58i8fi::::res://Letra.tres
 ::res://Imagenes/::1738118693
 boton.png::CompressedTexture2D::6837773420313232962::1738118693::1738118693::1::::<><>::
 Fondo chido.png::CompressedTexture2D::6726788820043495354::1738118693::1738118693::1::::<><>::
