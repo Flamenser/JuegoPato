@@ -8,7 +8,11 @@ extends CharacterBody2D
 
 # Dirección inicial
 var direction = Vector2.RIGHT
+# Referencia a la escena del juego
+var juego = null
 
+func _ready():
+	juego = get_parent()  # Guarda referencia al nodo 'Juego'
 func _physics_process(delta):
 	# Aplicar gravedad al jugador
 	if velocity.y < max_fall_speed:
@@ -28,6 +32,8 @@ func reverse_direction():
 	# Cambiar la dirección horizontal
 	direction.x *= -1
 	$SpriteJugador.scale.x *= -1
+	if juego:
+		juego.add_score() 
 func _input(event):
 	# Detectar si el jugador toca la pantalla
 	if event is InputEventScreenTouch and event.pressed:

@@ -1,5 +1,13 @@
 extends Node2D
+var score = 0 # Puntuación del jugador
 
+func _ready():
+	update_score()  # Actualizar la puntuación al inicio
+func add_score():
+	score += 1  # Aumentar puntuación
+	update_score()  # Reflejar el cambio en pantalla
+func update_score():
+	$ScoreLabel.text = str(score)  # Actualizar el texto en pantalla
 
 func _on_reinicio_pressed():
 	get_tree().paused = false
