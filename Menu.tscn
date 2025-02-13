@@ -14,10 +14,10 @@ scale = Vector2(1.20167, 1.43222)
 texture = ExtResource("1_s7oat")
 
 [node name="Jugar" type="TextureButton" parent="."]
-offset_left = 164.0
-offset_top = 725.0
-offset_right = 564.0
-offset_bottom = 925.0
+offset_left = 163.0
+offset_top = 474.0
+offset_right = 563.0
+offset_bottom = 674.0
 texture_normal = ExtResource("3_uwulu")
 
 [node name="Label" type="Label" parent="Jugar"]
@@ -31,4 +31,23 @@ label_settings = ExtResource("4_q61pn")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Tienda" type="TextureButton" parent="."]
+offset_left = 158.0
+offset_top = 699.0
+offset_right = 558.0
+offset_bottom = 899.0
+texture_normal = ExtResource("3_uwulu")
+
+[node name="Label" type="Label" parent="Tienda"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 50.0
+offset_right = 354.0
+offset_bottom = 159.0
+text = "Tienda"
+label_settings = ExtResource("4_q61pn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Tienda" to="." method="_on_tienda_pressed"]

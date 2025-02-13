@@ -25,3 +25,8 @@ func on_game_over():
 func _on_death_zone_body_entered(body):
 	if body.name == "Jugador":  # Asegúrate de que es el jugador
 		on_game_over()
+
+
+func _on_pico_body_entered(body):
+	if body.name == "Jugador" and $Pico.show:  # Asegúrate de que es el jugador
+		on_game_over()

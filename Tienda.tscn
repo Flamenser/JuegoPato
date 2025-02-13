@@ -1,0 +1,69 @@
+[gd_scene load_steps=7 format=3 uid="uid://bryctc0jd671j"]
+
+[ext_resource type="Script" path="res://Tienda.gd" id="1_jtufj"]
+[ext_resource type="Texture2D" uid="uid://c23rh12mphlbe" path="res://Imagenes/Fondo chido.png" id="1_nrnb1"]
+[ext_resource type="Texture2D" uid="uid://c4ojenm6fi731" path="res://Imagenes/boton.png" id="3_28vby"]
+[ext_resource type="LabelSettings" uid="uid://4iw2cg58i8fi" path="res://Letra.tres" id="4_baxf7"]
+[ext_resource type="Texture2D" uid="uid://c714oyv0oh8sa" path="res://Imagenes/pato1.png" id="5_gvnwg"]
+[ext_resource type="Texture2D" uid="uid://wehrqmkb7psl" path="res://Imagenes/pato2.png" id="6_euywu"]
+
+[node name="Tienda" type="Node2D"]
+script = ExtResource("1_jtufj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(359.5, 644.5)
+scale = Vector2(1.20167, 1.43222)
+texture = ExtResource("1_nrnb1")
+
+[node name="Volver" type="TextureButton" parent="."]
+offset_left = -20.0
+offset_top = -14.0
+offset_right = 380.0
+offset_bottom = 186.0
+scale = Vector2(0.703921, 0.734717)
+texture_normal = ExtResource("3_28vby")
+
+[node name="Label" type="Label" parent="Volver"]
+offset_left = 46.8802
+offset_top = 46.2763
+offset_right = 348.88
+offset_bottom = 155.276
+text = "Menu
+"
+label_settings = ExtResource("4_baxf7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemList" type="ItemList" parent="."]
+anchors_preset = -1
+anchor_top = 0.026
+anchor_bottom = 0.026
+offset_left = 7.0
+offset_top = 149.0
+offset_right = 388.0
+offset_bottom = 739.0
+scale = Vector2(1.84, 1.92)
+select_mode = 1
+max_text_lines = 4
+max_columns = 4
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ItemList"]
+layout_mode = 0
+offset_right = 708.0
+offset_bottom = 1145.0
+
+[node name="Pato1" type="TextureButton" parent="ItemList"]
+layout_mode = 2
+offset_right = 65.0
+offset_bottom = 64.0
+texture_normal = ExtResource("5_gvnwg")
+
+[node name="Pato2" type="TextureButton" parent="ItemList"]
+layout_mode = 2
+offset_left = 66.0
+offset_top = 1.0
+offset_right = 131.0
+offset_bottom = 65.0
+texture_normal = ExtResource("6_euywu")
+
+[connection signal="pressed" from="Volver" to="." method="_on_volver_pressed"]
