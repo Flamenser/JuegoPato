@@ -1,18 +1,19 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739405029
-icon.svg::CompressedTexture2D::8887980079877972278::1738118693::1739243301::1::::<><>::
-Juego.gd::GDScript::-1::1739243207::0::1::::<>Node2D<>::
-Juego.tscn::PackedScene::4091762584950163414::1739405029::0::1::::<><>::uid://c23rh12mphlbe::::res://Imagenes/Fondo chido.png<>res://Juego.gd<>res://Jugador.gd<>uid://b3fhpwsgboejj::::res://Imagenes/patobase.png<>uid://4iw2cg58i8fi::::res://Letra.tres<>uid://bg60rowr68wrg::::res://Imagenes/pico.png
-Jugador.gd::GDScript::-1::1739243207::0::1::::<>CharacterBody2D<>::
-Letra.tres::LabelSettings::2053375593534753094::1739404149::0::1::::<><>::
-Menu.gd::GDScript::-1::1739404643::0::1::::<>Node<>::
-Menu.tscn::PackedScene::3245291322609522372::1739405029::0::1::::<><>::res://Menu.gd<>uid://c23rh12mphlbe::::res://Imagenes/Fondo chido.png<>uid://c4ojenm6fi731::::res://Imagenes/boton.png<>uid://4iw2cg58i8fi::::res://Letra.tres
-Tienda.gd::GDScript::-1::1739404926::0::1::::<>Node2D<>::
-Tienda.tscn::PackedScene::3629331599787806981::1739405029::0::1::::<><>::res://Tienda.gd<>uid://c23rh12mphlbe::::res://Imagenes/Fondo chido.png<>uid://c4ojenm6fi731::::res://Imagenes/boton.png<>uid://4iw2cg58i8fi::::res://Letra.tres
-::res://Imagenes/::1739405264
-boton.png::CompressedTexture2D::6837773420313232962::1738118693::1738118693::1::::<><>::
-Fondo chido.png::CompressedTexture2D::6726788820043495354::1738118693::1738118693::1::::<><>::
-pato1.png::CompressedTexture2D::7074345273469892960::1739405249::1739405265::1::::<><>::
-pato2.png::CompressedTexture2D::1552868307866921595::1739405264::1739405265::1::::<><>::
-patobase.png::CompressedTexture2D::4362483183780932107::1738118693::1738118693::1::::<><>::
-pico.png::CompressedTexture2D::2873098509340444088::1739243207::1739243207::1::::<><>::
+::res://::1739661350
+icon.svg::CompressedTexture2D::8887980079877972278::1735515756::1739441075::1::::<><>::
+Juego.gd::GDScript::-1::1739436049::0::1::::<>Node2D<>::
+Juego.tscn::PackedScene::4091762584950163414::1739441081::0::1::::<><>::uid://c23rh12mphlbe::::res://Imagenes/Fondo chido.png<>res://Juego.gd<>res://Jugador.gd<>uid://b3fhpwsgboejj::::res://Imagenes/patobase.png<>uid://4iw2cg58i8fi::::res://Letra.tres<>uid://bg60rowr68wrg::::res://Imagenes/pico.png
+Jugador.gd::GDScript::-1::1739175739::0::1::::<>CharacterBody2D<>::
+Letra.tres::LabelSettings::2053375593534753094::1739441080::0::1::::<><>::
+Menu.gd::GDScript::-1::1739436049::0::1::::<>Node<>::
+Menu.tscn::PackedScene::3245291322609522372::1739441080::0::1::::<><>::res://Menu.gd<>uid://c23rh12mphlbe::::res://Imagenes/Fondo chido.png<>uid://c4ojenm6fi731::::res://Imagenes/boton.png<>uid://4iw2cg58i8fi::::res://Letra.tres
+Pico.gd::GDScript::-1::1739436049::0::1::::<>Area2D<>::
+Tienda.gd::GDScript::-1::1739436049::0::1::::<>Node2D<>::
+Tienda.tscn::PackedScene::3629331599787806981::1739441081::0::1::::<><>::res://Tienda.gd<>uid://c23rh12mphlbe::::res://Imagenes/Fondo chido.png<>uid://c4ojenm6fi731::::res://Imagenes/boton.png<>uid://4iw2cg58i8fi::::res://Letra.tres<>uid://c714oyv0oh8sa::::res://Imagenes/pato1.png<>uid://wehrqmkb7psl::::res://Imagenes/pato2.png
+::res://Imagenes/::1739436049
+boton.png::CompressedTexture2D::6837773420313232962::1735526900::1735526912::1::::<><>::
+Fondo chido.png::CompressedTexture2D::6726788820043495354::1735525234::1735525259::1::::<><>::
+pato1.png::CompressedTexture2D::7074345273469892960::1739436049::1739436049::1::::<><>::
+pato2.png::CompressedTexture2D::1552868307866921595::1739436049::1739436049::1::::<><>::
+patobase.png::CompressedTexture2D::4362483183780932107::1735526910::1735526912::1::::<><>::
+pico.png::CompressedTexture2D::2873098509340444088::1739171226::1739171232::1::::<><>::

@@ -89,6 +89,16 @@ offset_right = 523.0
 offset_bottom = 546.0
 text = "Menú"
 
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 122.0
+offset_top = 176.0
+offset_right = 601.0
+offset_bottom = 375.0
+text = ":v"
+label_settings = ExtResource("5_sqlut")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Pico" type="Area2D" parent="."]
 visible = false
 position = Vector2(30, 129)
@@ -114,6 +124,7 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico3" type="Area2D" parent="."]
+visible = false
 position = Vector2(30, 250)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico3"]
@@ -125,6 +136,7 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico4" type="Area2D" parent="."]
+visible = false
 position = Vector2(30, 312)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico4"]
@@ -136,6 +148,7 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico5" type="Area2D" parent="."]
+visible = false
 position = Vector2(30, 372)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico5"]
@@ -147,6 +160,7 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico6" type="Area2D" parent="."]
+visible = false
 position = Vector2(30, 433)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico6"]
@@ -158,6 +172,7 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico7" type="Area2D" parent="."]
+visible = false
 position = Vector2(30, 492)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico7"]
@@ -169,6 +184,7 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico8" type="Area2D" parent="."]
+visible = false
 position = Vector2(30, 552)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico8"]
@@ -180,6 +196,7 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico9" type="Area2D" parent="."]
+visible = false
 position = Vector2(30, 611)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico9"]
@@ -191,6 +208,7 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico10" type="Area2D" parent="."]
+visible = false
 position = Vector2(30, 670)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico10"]
@@ -202,6 +220,7 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico11" type="Area2D" parent="."]
+visible = false
 position = Vector2(30, 730)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico11"]
@@ -213,6 +232,7 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico12" type="Area2D" parent="."]
+visible = false
 position = Vector2(30, 790)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico12"]
@@ -224,6 +244,7 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico13" type="Area2D" parent="."]
+visible = false
 position = Vector2(30, 850)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico13"]
@@ -235,6 +256,7 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico14" type="Area2D" parent="."]
+visible = false
 position = Vector2(30, 910)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico14"]
@@ -246,6 +268,7 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico15" type="Area2D" parent="."]
+visible = false
 position = Vector2(30, 972)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico15"]
@@ -257,6 +280,7 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico16" type="Area2D" parent="."]
+visible = false
 position = Vector2(30, 1032)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico16"]
@@ -268,6 +292,7 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico17" type="Area2D" parent="."]
+visible = false
 position = Vector2(30, 1092)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico17"]
@@ -279,6 +304,7 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico18" type="Area2D" parent="."]
+visible = false
 position = Vector2(30, 1153)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico18"]
@@ -290,6 +316,7 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico19" type="Area2D" parent="."]
+visible = false
 position = Vector2(30, 1214)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico19"]
@@ -301,8 +328,10 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico20" type="Area2D" parent="."]
-position = Vector2(694, 130)
-scale = Vector2(-1.00954, -0.927076)
+visible = false
+position = Vector2(694, 127)
+rotation = 3.14159
+scale = Vector2(1.00954, 0.927076)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico20"]
 texture = ExtResource("6_dvbx7")
@@ -313,8 +342,10 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico21" type="Area2D" parent="."]
-position = Vector2(694, 189)
-scale = Vector2(-1.00954, -0.927076)
+visible = false
+position = Vector2(694, 186)
+rotation = 3.14159
+scale = Vector2(1.00954, 0.927076)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico21"]
 texture = ExtResource("6_dvbx7")
@@ -325,8 +356,10 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico22" type="Area2D" parent="."]
-position = Vector2(694, 245)
-scale = Vector2(-1.00954, -0.927076)
+visible = false
+position = Vector2(694, 242)
+rotation = 3.14159
+scale = Vector2(1.00954, 0.927076)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico22"]
 texture = ExtResource("6_dvbx7")
@@ -337,8 +370,10 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico23" type="Area2D" parent="."]
-position = Vector2(694, 302)
-scale = Vector2(-1.00954, -0.927076)
+visible = false
+position = Vector2(694, 299)
+rotation = 3.14159
+scale = Vector2(1.00954, 0.927076)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico23"]
 texture = ExtResource("6_dvbx7")
@@ -349,8 +384,10 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico24" type="Area2D" parent="."]
-position = Vector2(694, 358)
-scale = Vector2(-1.00954, -0.927076)
+visible = false
+position = Vector2(694, 355)
+rotation = 3.14159
+scale = Vector2(1.00954, 0.927076)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico24"]
 texture = ExtResource("6_dvbx7")
@@ -361,8 +398,10 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico25" type="Area2D" parent="."]
-position = Vector2(694, 414)
-scale = Vector2(-1.00954, -0.927076)
+visible = false
+position = Vector2(694, 411)
+rotation = 3.14159
+scale = Vector2(1.00954, 0.927076)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico25"]
 texture = ExtResource("6_dvbx7")
@@ -373,8 +412,10 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico26" type="Area2D" parent="."]
-position = Vector2(694, 471)
-scale = Vector2(-1.00954, -0.927076)
+visible = false
+position = Vector2(694, 468)
+rotation = 3.14159
+scale = Vector2(1.00954, 0.927076)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico26"]
 texture = ExtResource("6_dvbx7")
@@ -385,8 +426,10 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico27" type="Area2D" parent="."]
-position = Vector2(695, 527)
-scale = Vector2(-1.00954, -0.927076)
+visible = false
+position = Vector2(695, 524)
+rotation = 3.14159
+scale = Vector2(1.00954, 0.927076)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico27"]
 texture = ExtResource("6_dvbx7")
@@ -397,8 +440,10 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico28" type="Area2D" parent="."]
-position = Vector2(695, 582)
-scale = Vector2(-1.00954, -0.927076)
+visible = false
+position = Vector2(695, 579)
+rotation = 3.14159
+scale = Vector2(1.00954, 0.927076)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico28"]
 texture = ExtResource("6_dvbx7")
@@ -409,8 +454,10 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico29" type="Area2D" parent="."]
-position = Vector2(694, 637)
-scale = Vector2(-1.00954, -0.927076)
+visible = false
+position = Vector2(694, 634)
+rotation = 3.14159
+scale = Vector2(1.00954, 0.927076)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico29"]
 texture = ExtResource("6_dvbx7")
@@ -421,8 +468,10 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico30" type="Area2D" parent="."]
-position = Vector2(694, 692)
-scale = Vector2(-1.00954, -0.927076)
+visible = false
+position = Vector2(694, 689)
+rotation = 3.14159
+scale = Vector2(1.00954, 0.927076)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico30"]
 texture = ExtResource("6_dvbx7")
@@ -433,8 +482,10 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico31" type="Area2D" parent="."]
-position = Vector2(694, 748)
-scale = Vector2(-1.00954, -0.927076)
+visible = false
+position = Vector2(694, 745)
+rotation = 3.14159
+scale = Vector2(1.00954, 0.927076)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico31"]
 texture = ExtResource("6_dvbx7")
@@ -445,8 +496,10 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico32" type="Area2D" parent="."]
-position = Vector2(694, 805)
-scale = Vector2(-1.00954, -0.927076)
+visible = false
+position = Vector2(694, 802)
+rotation = 3.14159
+scale = Vector2(1.00954, 0.927076)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico32"]
 texture = ExtResource("6_dvbx7")
@@ -457,8 +510,10 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico33" type="Area2D" parent="."]
-position = Vector2(694, 860)
-scale = Vector2(-1.00954, -0.927076)
+visible = false
+position = Vector2(694, 857)
+rotation = 3.14159
+scale = Vector2(1.00954, 0.927076)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico33"]
 texture = ExtResource("6_dvbx7")
@@ -469,8 +524,10 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico34" type="Area2D" parent="."]
-position = Vector2(694, 916)
-scale = Vector2(-1.00954, -0.927076)
+visible = false
+position = Vector2(694, 913)
+rotation = 3.14159
+scale = Vector2(1.00954, 0.927076)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico34"]
 texture = ExtResource("6_dvbx7")
@@ -481,8 +538,10 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico35" type="Area2D" parent="."]
-position = Vector2(694, 971)
-scale = Vector2(-1.00954, -0.927076)
+visible = false
+position = Vector2(694, 968)
+rotation = 3.14159
+scale = Vector2(1.00954, 0.927076)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico35"]
 texture = ExtResource("6_dvbx7")
@@ -493,8 +552,10 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico36" type="Area2D" parent="."]
-position = Vector2(694, 1026)
-scale = Vector2(-1.00954, -0.927076)
+visible = false
+position = Vector2(694, 1023)
+rotation = 3.14159
+scale = Vector2(1.00954, 0.927076)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico36"]
 texture = ExtResource("6_dvbx7")
@@ -505,8 +566,10 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico37" type="Area2D" parent="."]
-position = Vector2(694, 1082)
-scale = Vector2(-1.00954, -0.927076)
+visible = false
+position = Vector2(694, 1079)
+rotation = 3.14159
+scale = Vector2(1.00954, 0.927076)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico37"]
 texture = ExtResource("6_dvbx7")
@@ -517,8 +580,10 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico38" type="Area2D" parent="."]
-position = Vector2(694, 1137)
-scale = Vector2(-1.00954, -0.927076)
+visible = false
+position = Vector2(694, 1134)
+rotation = 3.14159
+scale = Vector2(1.00954, 0.927076)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico38"]
 texture = ExtResource("6_dvbx7")
@@ -529,8 +594,10 @@ scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico39" type="Area2D" parent="."]
-position = Vector2(694, 1192)
-scale = Vector2(-1.00954, -0.927076)
+visible = false
+position = Vector2(694, 1189)
+rotation = 3.14159
+scale = Vector2(1.00954, 0.927076)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico39"]
 texture = ExtResource("6_dvbx7")
@@ -540,20 +607,22 @@ position = Vector2(-29.6701, -27.1708)
 scale = Vector2(-0.00200726, -0.172714)
 polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
-[node name="ScoreLabel" type="Label" parent="."]
-offset_left = 122.0
-offset_top = 176.0
-offset_right = 601.0
-offset_bottom = 375.0
-text = ":v"
-label_settings = ExtResource("5_sqlut")
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Pico40" type="Area2D" parent="."]
+visible = false
+position = Vector2(694, 1241)
+rotation = 3.14159
+scale = Vector2(1.00954, 0.927076)
+
+[node name="Sprite2D" type="Sprite2D" parent="Pico40"]
+texture = ExtResource("6_dvbx7")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Pico40"]
+position = Vector2(-29.6701, -27.1708)
+scale = Vector2(-0.00200726, -0.172714)
+polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [connection signal="pressed" from="Tap" to="Jugador" method="_on_tap_pressed"]
 [connection signal="body_entered" from="DeathZone2" to="." method="_on_death_zone_body_entered"]
 [connection signal="body_entered" from="DeathZone" to="." method="_on_death_zone_body_entered"]
 [connection signal="pressed" from="MenuPartida/Reinicio" to="." method="_on_reinicio_pressed"]
 [connection signal="pressed" from="MenuPartida/Menu" to="." method="_on_menu_pressed"]
-[connection signal="body_entered" from="Pico" to="." method="_on_pico_body_entered"]
-[connection signal="body_entered" from="Pico39" to="." method="_on_pico_body_entered"]

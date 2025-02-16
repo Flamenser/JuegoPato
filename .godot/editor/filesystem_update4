@@ -1,7 +1,5 @@
-res://Menu.tscn
-res://Letra.tres
 res://Juego.tscn
-res://Menu.gd
+res://Letra.tres
+res://Menu.tscn
 res://Tienda.tscn
-res://Tienda.gd
 res://Juego.gd

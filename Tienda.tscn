@@ -24,6 +24,7 @@ scale = Vector2(0.703921, 0.734717)
 texture_normal = ExtResource("3_28vby")
 
 [node name="Label" type="Label" parent="Volver"]
+layout_mode = 0
 offset_left = 46.8802
 offset_top = 46.2763
 offset_right = 348.88
