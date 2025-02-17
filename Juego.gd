@@ -1,6 +1,7 @@
 extends Node2D
 
 var score = 0
+var moneda = 0
 var moneda_presente = false
 var moneda_escena = preload("res://Moneda.tscn")
 var picos_izquierda = []
@@ -93,6 +94,10 @@ func _on_menu_pressed():
 func on_game_over():
 	$MenuPartida.visible = true
 	get_tree().paused = true  # Pausa el juego
+	if score > Global.highscore:
+		Global.highscore == score
+		Save.saveValue("Menu", "highscore", Global.highscore)
+
 	
 func _on_death_zone_body_entered(body):
 	if body.name == "Jugador":  # Asegúrate de que es el jugador

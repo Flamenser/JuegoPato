@@ -1,9 +1,7 @@
 res://Juego.tscn
 res://Letra.tres
+res://Global.gd
+res://Juego.gd
 res://Menu.tscn
 res://Tienda.tscn
-res://Juego.gd
-res://Jugador.gd
-res://Pico.gd
-res://Moneda.gd
 res://Moneda.tscn
