@@ -3,3 +3,5 @@ res://Letra.tres
 res://Menu.tscn
 res://Tienda.tscn
 res://Juego.gd
+res://Jugador.gd
+res://Pico.gd

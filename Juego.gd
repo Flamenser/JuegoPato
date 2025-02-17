@@ -3,20 +3,30 @@ extends Node2D
 var score = 0
 var picos_izquierda = []
 var picos_derecha = []
+var ultimo_pico_izquierda = null
+var ultimo_pico_derecha = null
 
 func _ready():
 	update_score()
 	obtener_picos()
-	debug_nodos()
+
 func obtener_picos():
-	# Llenar las listas con los picos según su nombre
 	for i in range(1, 20):  # Picos de la izquierda (1 al 19)
-		picos_izquierda.append(get_node("Pico" + str(i)))
+		var pico = get_node_or_null("Pico" + str(i))
+		if pico:
+			picos_izquierda.append(pico)
+			print("✅ Encontrado: Pico" + str(i))
+		else:
+			print("❌ ERROR: No se encontró Pico" + str(i))
+
 	for i in range(20, 41):  # Picos de la derecha (20 al 40)
-		picos_derecha.append(get_node("Pico" + str(i)))
-func debug_nodos():
-	for nodo in get_tree().get_root().get_children():
-		print("📌 Nodo encontrado en root: " + nodo.name)
+		var pico = get_node_or_null("Pico" + str(i))
+		if pico:
+			picos_derecha.append(pico)
+			print("✅ Encontrado: Pico" + str(i))
+		else:
+			print("❌ ERROR: No se encontró Pico" + str(i))
+
 
 func add_score():
 	score += 1
@@ -24,17 +34,41 @@ func add_score():
 	activar_pico_random()
 
 func update_score():
-	$ScoreLabel.text = "Puntos: " + str(score)
+	$ScoreLabel.text = str(score)
 
 func activar_pico_random():
-	if $Jugador.position.x <= 0 or position.x >= 643:
-		 # Si el jugador está en la izquierda, activamos un pico de la derecha
-		var pico = picos_derecha[randi() % picos_derecha.size()]
-		pico.show()
+	# Asegurar que los picos de ambos lados se oculten antes de activar uno nuevo
+	var lista_picos = []
+	var ultimo_pico = null
+
+	# Determinar qué lista de picos usar y cuál fue el último activado
+	if $Jugador.position.x >= 643:  # Si toca el borde derecho, activamos un pico en la izquierda
+		lista_picos = picos_izquierda
+		ultimo_pico = ultimo_pico_izquierda
+	elif $Jugador.position.x <= 0:  # Si toca el borde izquierdo, activamos un pico en la derecha
+		lista_picos = picos_derecha
+		ultimo_pico = ultimo_pico_derecha
+
+	# Filtrar solo los picos que NO estén activados
+	var picos_disponibles = []
+	for pico in lista_picos:
+		if pico and not pico.visible and pico != ultimo_pico:  # Evitar el último pico activado
+			picos_disponibles.append(pico)
+
+	# Verificar si hay picos disponibles antes de seleccionar uno
+	if picos_disponibles.size() > 0:
+		var pico_elegido = picos_disponibles[randi() % picos_disponibles.size()]
+		pico_elegido.show()
+		print(pico_elegido)
+		# Guardar el último pico activado para evitar repeticiones
+		if lista_picos == picos_izquierda:
+			ultimo_pico_izquierda = pico_elegido
+		else:
+			ultimo_pico_derecha = pico_elegido
+
 	else:
-		# Si el jugador está en la derecha, activamos un pico de la izquierda
-		var pico = picos_izquierda[randi() % picos_izquierda.size()]
-		pico.show()
+		print("⚠️ No se encontró un pico nuevo. Se intentará reiniciar.")
+
 
 func _on_reinicio_pressed():
 	get_tree().paused = false
@@ -52,3 +86,4 @@ func on_game_over():
 func _on_death_zone_body_entered(body):
 	if body.name == "Jugador":  # Asegúrate de que es el jugador
 		on_game_over()
+
