@@ -25,7 +25,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 	# Detectar si toca los bordes de la pantalla
-	if position.x <= 0 or position.x >= 643:
+	if position.x <= -15 or position.x >= 658:
 		reverse_direction()
 
 func reverse_direction():
@@ -49,3 +49,6 @@ func end():
 
 func _on_tap_pressed():
 	jump()
+func on_game_over():
+	$"../MenuPartida".visible = true
+	get_tree().paused = true  # Pausa el juego

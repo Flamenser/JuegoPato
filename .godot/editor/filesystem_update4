@@ -5,3 +5,5 @@ res://Tienda.tscn
 res://Juego.gd
 res://Jugador.gd
 res://Pico.gd
+res://Moneda.gd
+res://Moneda.tscn

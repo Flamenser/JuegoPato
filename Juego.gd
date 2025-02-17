@@ -1,6 +1,8 @@
 extends Node2D
 
 var score = 0
+var moneda_presente = false
+var moneda_escena = preload("res://Moneda.tscn")
 var picos_izquierda = []
 var picos_derecha = []
 var ultimo_pico_izquierda = null
@@ -32,10 +34,19 @@ func add_score():
 	score += 1
 	update_score()
 	activar_pico_random()
-
+	if score % 2 == 0 and not moneda_presente:
+		generar_moneda()
 func update_score():
 	$ScoreLabel.text = str(score)
-
+func generar_moneda():
+	var moneda = moneda_escena.instantiate()
+	moneda.position = Vector2(randf_range(256, 512), randf_range(128, 1152))  # Área donde puede aparecer
+	moneda.connect("moneda_recogida", Callable(self, "_on_moneda_recogida"))
+	add_child(moneda)
+	moneda_presente = true
+func _on_moneda_recogida():
+	moneda_presente = false
+	print("✅ La moneda fue recogida y se puede generar una nueva.")  # Para depuración
 func activar_pico_random():
 	# Asegurar que los picos de ambos lados se oculten antes de activar uno nuevo
 	var lista_picos = []
