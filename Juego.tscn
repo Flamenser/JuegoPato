@@ -3,17 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://c23rh12mphlbe" path="res://Imagenes/Fondo chido.png" id="1_7ni0n"]
 [ext_resource type="Script" path="res://Juego.gd" id="1_n34co"]
 [ext_resource type="Script" path="res://Jugador.gd" id="2_7tbpi"]
+[ext_resource type="LabelSettings" uid="uid://b1a4hes3cural" path="res://Fondotransparente.tres" id="3_6vmls"]
 [ext_resource type="Texture2D" uid="uid://b3fhpwsgboejj" path="res://Imagenes/patobase.png" id="3_a70dq"]
 [ext_resource type="LabelSettings" uid="uid://4iw2cg58i8fi" path="res://Letra.tres" id="5_sqlut"]
 [ext_resource type="Texture2D" uid="uid://bg60rowr68wrg" path="res://Imagenes/pico.png" id="6_dvbx7"]
 [ext_resource type="Script" path="res://Pico.gd" id="6_evqe5"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_cdmib"]
-font_size = 100
-font_color = Color(0.964706, 0.94902, 0.996078, 0.486275)
-outline_size = 8
-outline_color = Color(0.00784314, 0.00784314, 0.00784314, 1)
-shadow_color = Color(0.00784314, 0.00784314, 0.00784314, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n3gy4"]
 size = Vector2(78.5, 11.5)
@@ -39,7 +33,7 @@ offset_top = 195.0
 offset_right = 598.0
 offset_bottom = 394.0
 text = ":v"
-label_settings = SubResource("LabelSettings_cdmib")
+label_settings = ExtResource("3_6vmls")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -75,7 +69,6 @@ scale = Vector2(0.986589, -1.23837)
 shape = SubResource("RectangleShape2D_vbxfh")
 
 [node name="MenuPartida" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Control" type="Control" parent="MenuPartida"]
 layout_mode = 3
@@ -84,11 +77,11 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Perdiste" type="Label" parent="MenuPartida"]
-offset_left = 302.0
-offset_top = 422.0
-offset_right = 418.0
-offset_bottom = 468.0
-text = "Perdiste :("
+offset_left = 207.0
+offset_top = 418.0
+offset_right = 365.0
+offset_bottom = 464.0
+text = "Has obtenido: "
 label_settings = ExtResource("5_sqlut")
 horizontal_alignment = 1
 

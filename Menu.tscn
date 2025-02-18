@@ -1,9 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmibqd40uid37"]
+[gd_scene load_steps=7 format=3 uid="uid://bmibqd40uid37"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_3o8wy"]
 [ext_resource type="Texture2D" uid="uid://c23rh12mphlbe" path="res://Imagenes/Fondo chido.png" id="1_s7oat"]
 [ext_resource type="Texture2D" uid="uid://c4ojenm6fi731" path="res://Imagenes/boton.png" id="3_uwulu"]
 [ext_resource type="LabelSettings" uid="uid://4iw2cg58i8fi" path="res://Letra.tres" id="4_q61pn"]
+[ext_resource type="Texture2D" uid="uid://c0l6iqcgnsrms" path="res://Imagenes/moneda.png" id="5_aeclm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_manfb"]
+font_size = 20
+font_color = Color(0.964706, 0.94902, 0.996078, 0.486275)
+outline_size = 8
+outline_color = Color(0.00784314, 0.00784314, 0.00784314, 1)
+shadow_color = Color(0.00784314, 0.00784314, 0.00784314, 0)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_3o8wy")
@@ -48,6 +56,19 @@ text = "Tienda"
 label_settings = ExtResource("4_q61pn")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Moneda" type="Sprite2D" parent="."]
+position = Vector2(29, 31.5)
+scale = Vector2(1.28125, 1.26563)
+texture = ExtResource("5_aeclm")
+
+[node name="CantidadMonedas" type="Label" parent="Moneda"]
+offset_left = 24.0
+offset_top = -16.0
+offset_right = 197.0
+offset_bottom = 12.0
+text = "0"
+label_settings = SubResource("LabelSettings_manfb")
 
 [connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="Tienda" to="." method="_on_tienda_pressed"]

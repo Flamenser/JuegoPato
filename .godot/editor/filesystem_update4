@@ -1,7 +1,7 @@
-res://Juego.tscn
-res://Letra.tres
-res://Global.gd
-res://Juego.gd
 res://Menu.tscn
+res://Letra.tres
+res://Menu.gd
+res://Tienda.gd
+res://Juego.tscn
 res://Tienda.tscn
 res://Moneda.tscn
