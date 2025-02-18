@@ -30,6 +30,10 @@ window/subwindows/embed_subwindows=false
 window/stretch/mode="canvas_items"
 window/handheld/orientation=1
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/admob/plugin.cfg")
+
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true

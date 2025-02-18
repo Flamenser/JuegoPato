@@ -1,7 +1,14 @@
-res://Menu.tscn
+res://Global.gd
+res://Juego.gd
 res://Letra.tres
-res://Menu.gd
-res://Tienda.gd
+res://grischido.tres
+res://Fondotransparente.tres
+res://Final_juego.tscn
+res://Menu.tscn
 res://Juego.tscn
 res://Tienda.tscn
 res://Moneda.tscn
+res://Final_juego.gd
+res://Jugador.gd
+res://Pico.gd
+res://Moneda.gd

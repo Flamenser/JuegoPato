@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var max_fall_speed = 600  # Velocidad máxima de caída
 @export var speed = 300           # Velocidad horizontal
 
+var final = "res://Juego.gd"
 # Dirección inicial
 var direction = Vector2.RIGHT
 # Referencia a la escena del juego
@@ -45,10 +46,14 @@ func jump():
 
 func end():
 	if position.y == 0:
-		$"../Panel".show
+		$"../MenuFinal/Final_juego".show()
 
 func _on_tap_pressed():
 	jump()
 func on_game_over():
-	$"../MenuPartida".visible = true
+	if get_parent().has_method("on_game_over"):
+		get_parent().on_game_over()
+	else:
+		print("⚠️ El padre no tiene un método on_game_over()")
 	get_tree().paused = true  # Pausa el juego
+	print("Puto")

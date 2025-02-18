@@ -9,6 +9,7 @@ var ultimo_pico_izquierda = null
 var ultimo_pico_derecha = null
 
 func _ready():
+	Global.monedaspartida = 0
 	update_score()
 	obtener_picos()
 
@@ -81,20 +82,20 @@ func activar_pico_random():
 		print("⚠️ No se encontró un pico nuevo. Se intentará reiniciar.")
 
 
-func _on_reinicio_pressed():
-	get_tree().paused = false
-	get_tree().reload_current_scene()
-
-
-func _on_menu_pressed():
-	get_tree().paused = false
-	get_tree().change_scene_to_file("res://Menu.tscn")
-
 func on_game_over():
-	$MenuPartida.visible = true
+	print(Global.monedaspartida)
+	newhighscore()
+	$MenuFinal.show()
 	get_tree().paused = true  # Pausa el juego
+	print("Skeree")
+	
 	
 func _on_death_zone_body_entered(body):
 	if body.name == "Jugador":  # Asegúrate de que es el jugador
 		on_game_over()
-
+func newhighscore():
+	print("Hola")
+	if score >= Global.highscore:
+		print("si")
+		Global.highscore = score
+		Save.saveValue("Menu", "highscore", Global.highscore)

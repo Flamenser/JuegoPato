@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyl7yrcm3ri1j"]
+
+[ext_resource type="Script" path="res://Final_juego.gd" id="1_1ddnl"]
+[ext_resource type="LabelSettings" uid="uid://4iw2cg58i8fi" path="res://Letra.tres" id="1_a764b"]
+[ext_resource type="Texture2D" uid="uid://c0l6iqcgnsrms" path="res://Imagenes/moneda.png" id="2_b8rks"]
+
+[node name="Final_juego" type="Node2D"]
+position = Vector2(0, 2)
+script = ExtResource("1_1ddnl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(36, 59)
+texture = ExtResource("2_b8rks")
+
+[node name="Perdiste" type="Label" parent="."]
+offset_left = 26.0
+offset_top = 42.0
+offset_right = 150.0
+offset_bottom = 81.0
+text = "
+"
+label_settings = ExtResource("1_a764b")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Reinicio" type="Button" parent="."]
+process_mode = 2
+offset_left = -7.0
+offset_top = 205.0
+offset_right = 136.0
+offset_bottom = 266.0
+text = "Reiniciar"
+metadata/_edit_use_anchors_ = true
+
+[node name="Menu" type="Button" parent="."]
+process_mode = 2
+offset_left = -7.0
+offset_top = 298.0
+offset_right = 136.0
+offset_bottom = 359.0
+text = "Menú"
+metadata/_edit_use_anchors_ = true
+
+[node name="Duplicar" type="Button" parent="."]
+process_mode = 2
+offset_left = -5.0
+offset_top = 110.0
+offset_right = 138.0
+offset_bottom = 171.0
+text = "Duplicar 
+monedas"
+metadata/_edit_use_anchors_ = true
+
+[node name="Refresh" type="Timer" parent="."]
+autostart = true
+
+[connection signal="pressed" from="Reinicio" to="." method="_on_reinicio_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Duplicar" to="." method="_on_duplicar_pressed"]
+[connection signal="timeout" from="Refresh" to="." method="_on_refresh_timeout"]

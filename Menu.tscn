@@ -5,13 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c4ojenm6fi731" path="res://Imagenes/boton.png" id="3_uwulu"]
 [ext_resource type="LabelSettings" uid="uid://4iw2cg58i8fi" path="res://Letra.tres" id="4_q61pn"]
 [ext_resource type="Texture2D" uid="uid://c0l6iqcgnsrms" path="res://Imagenes/moneda.png" id="5_aeclm"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_manfb"]
-font_size = 20
-font_color = Color(0.964706, 0.94902, 0.996078, 0.486275)
-outline_size = 8
-outline_color = Color(0.00784314, 0.00784314, 0.00784314, 1)
-shadow_color = Color(0.00784314, 0.00784314, 0.00784314, 0)
+[ext_resource type="LabelSettings" uid="uid://bc8rvexfit1x3" path="res://grischido.tres" id="6_ccsh5"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_3o8wy")
@@ -67,8 +61,15 @@ offset_left = 24.0
 offset_top = -16.0
 offset_right = 197.0
 offset_bottom = 12.0
-text = "0"
-label_settings = SubResource("LabelSettings_manfb")
+label_settings = ExtResource("6_ccsh5")
+
+[node name="Highscore" type="Label" parent="."]
+offset_left = 545.0
+offset_top = 8.0
+offset_right = 715.0
+offset_bottom = 36.0
+text = "Highscore: "
+label_settings = ExtResource("6_ccsh5")
 
 [connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="Tienda" to="." method="_on_tienda_pressed"]

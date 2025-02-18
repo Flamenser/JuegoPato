@@ -1,19 +1,21 @@
-[gd_scene load_steps=11 format=3 uid="uid://bykcy5e7xbfri"]
+[gd_scene load_steps=13 format=3 uid="uid://bykcy5e7xbfri"]
 
 [ext_resource type="Texture2D" uid="uid://c23rh12mphlbe" path="res://Imagenes/Fondo chido.png" id="1_7ni0n"]
 [ext_resource type="Script" path="res://Juego.gd" id="1_n34co"]
 [ext_resource type="Script" path="res://Jugador.gd" id="2_7tbpi"]
 [ext_resource type="LabelSettings" uid="uid://b1a4hes3cural" path="res://Fondotransparente.tres" id="3_6vmls"]
 [ext_resource type="Texture2D" uid="uid://b3fhpwsgboejj" path="res://Imagenes/patobase.png" id="3_a70dq"]
-[ext_resource type="LabelSettings" uid="uid://4iw2cg58i8fi" path="res://Letra.tres" id="5_sqlut"]
+[ext_resource type="Texture2D" uid="uid://cf8qqxfir7nnp" path="res://Imagenes/Fondo arriba.png" id="4_abgve"]
+[ext_resource type="Texture2D" uid="uid://bnymkrn7juank" path="res://Imagenes/Fondo abajo.png" id="5_7g31q"]
 [ext_resource type="Texture2D" uid="uid://bg60rowr68wrg" path="res://Imagenes/pico.png" id="6_dvbx7"]
 [ext_resource type="Script" path="res://Pico.gd" id="6_evqe5"]
+[ext_resource type="PackedScene" uid="uid://cyl7yrcm3ri1j" path="res://Final_juego.tscn" id="6_r3ax3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n3gy4"]
 size = Vector2(78.5, 11.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vbxfh"]
-size = Vector2(735.932, 22.9202)
+size = Vector2(735.932, 35.6855)
 
 [node name="Juego" type="Node2D"]
 script = ExtResource("1_n34co")
@@ -37,6 +39,16 @@ label_settings = ExtResource("3_6vmls")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Picos arriba" type="Sprite2D" parent="."]
+position = Vector2(357, -29)
+scale = Vector2(1, 0.825)
+texture = ExtResource("4_abgve")
+
+[node name="Picos abajo" type="Sprite2D" parent="."]
+position = Vector2(358, 1322)
+scale = Vector2(1, 0.825)
+texture = ExtResource("5_7g31q")
+
 [node name="Jugador" type="CharacterBody2D" parent="." groups=["Jugador"]]
 position = Vector2(82, 69)
 motion_mode = 1
@@ -52,11 +64,23 @@ position = Vector2(28, 18)
 scale = Vector2(1.8789, 1.90235)
 texture = ExtResource("3_a70dq")
 
+[node name="MenuFinal" type="MenuBar" parent="."]
+visible = false
+offset_left = -3.0
+offset_top = 235.0
+offset_right = 186.0
+offset_bottom = 504.0
+scale = Vector2(3.84074, 3.90201)
+
+[node name="Final_juego" parent="MenuFinal" instance=ExtResource("6_r3ax3")]
+position = Vector2(63.7899, 19.7334)
+scale = Vector2(0.51051, 0.487151)
+
 [node name="DeathZone2" type="Area2D" parent="."]
 position = Vector2(1, -1227)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone2"]
-position = Vector2(362, 1240)
+position = Vector2(363, 1261)
 scale = Vector2(0.986589, -1.23837)
 shape = SubResource("RectangleShape2D_vbxfh")
 
@@ -64,46 +88,13 @@ shape = SubResource("RectangleShape2D_vbxfh")
 position = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
-position = Vector2(358, 1275)
+position = Vector2(358, 1267.1)
 scale = Vector2(0.986589, -1.23837)
 shape = SubResource("RectangleShape2D_vbxfh")
 
-[node name="MenuPartida" type="CanvasLayer" parent="."]
-
-[node name="Control" type="Control" parent="MenuPartida"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Perdiste" type="Label" parent="MenuPartida"]
-offset_left = 207.0
-offset_top = 418.0
-offset_right = 365.0
-offset_bottom = 464.0
-text = "Has obtenido: "
-label_settings = ExtResource("5_sqlut")
-horizontal_alignment = 1
-
-[node name="Reinicio" type="Button" parent="MenuPartida"]
-process_mode = 2
-offset_left = 190.0
-offset_top = 486.0
-offset_right = 333.0
-offset_bottom = 547.0
-text = "Reiniciar"
-
-[node name="Menu" type="Button" parent="MenuPartida"]
-process_mode = 2
-offset_left = 380.0
-offset_top = 485.0
-offset_right = 523.0
-offset_bottom = 546.0
-text = "Menú"
-
 [node name="Pico1" type="Area2D" parent="."]
 visible = false
-position = Vector2(30, 129)
+position = Vector2(30, 106)
 script = ExtResource("6_evqe5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico1"]
@@ -116,7 +107,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico2" type="Area2D" parent="."]
 visible = false
-position = Vector2(30, 190)
+position = Vector2(30, 167)
 script = ExtResource("6_evqe5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico2"]
@@ -129,7 +120,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico3" type="Area2D" parent="."]
 visible = false
-position = Vector2(30, 250)
+position = Vector2(30, 227)
 script = ExtResource("6_evqe5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico3"]
@@ -142,7 +133,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico4" type="Area2D" parent="."]
 visible = false
-position = Vector2(30, 312)
+position = Vector2(30, 289)
 script = ExtResource("6_evqe5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico4"]
@@ -155,7 +146,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico5" type="Area2D" parent="."]
 visible = false
-position = Vector2(30, 372)
+position = Vector2(30, 349)
 script = ExtResource("6_evqe5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico5"]
@@ -168,7 +159,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico6" type="Area2D" parent="."]
 visible = false
-position = Vector2(30, 433)
+position = Vector2(30, 410)
 script = ExtResource("6_evqe5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico6"]
@@ -181,7 +172,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico7" type="Area2D" parent="."]
 visible = false
-position = Vector2(30, 492)
+position = Vector2(30, 469)
 script = ExtResource("6_evqe5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico7"]
@@ -194,7 +185,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico8" type="Area2D" parent="."]
 visible = false
-position = Vector2(30, 552)
+position = Vector2(30, 529)
 script = ExtResource("6_evqe5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico8"]
@@ -207,7 +198,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico9" type="Area2D" parent="."]
 visible = false
-position = Vector2(30, 611)
+position = Vector2(30, 588)
 script = ExtResource("6_evqe5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico9"]
@@ -220,7 +211,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico10" type="Area2D" parent="."]
 visible = false
-position = Vector2(30, 670)
+position = Vector2(30, 647)
 script = ExtResource("6_evqe5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico10"]
@@ -233,7 +224,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico11" type="Area2D" parent="."]
 visible = false
-position = Vector2(30, 730)
+position = Vector2(30, 707)
 script = ExtResource("6_evqe5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico11"]
@@ -246,7 +237,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico12" type="Area2D" parent="."]
 visible = false
-position = Vector2(30, 790)
+position = Vector2(30, 767)
 script = ExtResource("6_evqe5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico12"]
@@ -259,7 +250,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico13" type="Area2D" parent="."]
 visible = false
-position = Vector2(30, 850)
+position = Vector2(30, 827)
 script = ExtResource("6_evqe5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico13"]
@@ -272,7 +263,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico14" type="Area2D" parent="."]
 visible = false
-position = Vector2(30, 910)
+position = Vector2(30, 887)
 script = ExtResource("6_evqe5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico14"]
@@ -285,7 +276,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico15" type="Area2D" parent="."]
 visible = false
-position = Vector2(30, 972)
+position = Vector2(30, 949)
 script = ExtResource("6_evqe5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico15"]
@@ -298,7 +289,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico16" type="Area2D" parent="."]
 visible = false
-position = Vector2(30, 1032)
+position = Vector2(30, 1009)
 script = ExtResource("6_evqe5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico16"]
@@ -311,7 +302,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico17" type="Area2D" parent="."]
 visible = false
-position = Vector2(30, 1092)
+position = Vector2(30, 1069)
 script = ExtResource("6_evqe5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico17"]
@@ -324,7 +315,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico18" type="Area2D" parent="."]
 visible = false
-position = Vector2(30, 1153)
+position = Vector2(30, 1130)
 script = ExtResource("6_evqe5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico18"]
@@ -337,7 +328,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico19" type="Area2D" parent="."]
 visible = false
-position = Vector2(30, 1214)
+position = Vector2(30, 1191)
 script = ExtResource("6_evqe5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Pico19"]
@@ -350,7 +341,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico20" type="Area2D" parent="."]
 visible = false
-position = Vector2(694, 127)
+position = Vector2(689, 101)
 rotation = 3.14159
 scale = Vector2(1.00954, 0.927076)
 script = ExtResource("6_evqe5")
@@ -365,7 +356,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico21" type="Area2D" parent="."]
 visible = false
-position = Vector2(694, 186)
+position = Vector2(689, 160)
 rotation = 3.14159
 scale = Vector2(1.00954, 0.927076)
 script = ExtResource("6_evqe5")
@@ -380,7 +371,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico22" type="Area2D" parent="."]
 visible = false
-position = Vector2(694, 242)
+position = Vector2(689, 216)
 rotation = 3.14159
 scale = Vector2(1.00954, 0.927076)
 script = ExtResource("6_evqe5")
@@ -395,7 +386,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico23" type="Area2D" parent="."]
 visible = false
-position = Vector2(694, 299)
+position = Vector2(689, 273)
 rotation = 3.14159
 scale = Vector2(1.00954, 0.927076)
 script = ExtResource("6_evqe5")
@@ -410,7 +401,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico24" type="Area2D" parent="."]
 visible = false
-position = Vector2(694, 355)
+position = Vector2(689, 329)
 rotation = 3.14159
 scale = Vector2(1.00954, 0.927076)
 script = ExtResource("6_evqe5")
@@ -425,7 +416,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico25" type="Area2D" parent="."]
 visible = false
-position = Vector2(694, 411)
+position = Vector2(689, 385)
 rotation = 3.14159
 scale = Vector2(1.00954, 0.927076)
 script = ExtResource("6_evqe5")
@@ -440,7 +431,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico26" type="Area2D" parent="."]
 visible = false
-position = Vector2(694, 468)
+position = Vector2(689, 442)
 rotation = 3.14159
 scale = Vector2(1.00954, 0.927076)
 script = ExtResource("6_evqe5")
@@ -455,7 +446,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico27" type="Area2D" parent="."]
 visible = false
-position = Vector2(695, 524)
+position = Vector2(690, 498)
 rotation = 3.14159
 scale = Vector2(1.00954, 0.927076)
 script = ExtResource("6_evqe5")
@@ -470,7 +461,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico28" type="Area2D" parent="."]
 visible = false
-position = Vector2(695, 579)
+position = Vector2(690, 553)
 rotation = 3.14159
 scale = Vector2(1.00954, 0.927076)
 script = ExtResource("6_evqe5")
@@ -485,7 +476,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico29" type="Area2D" parent="."]
 visible = false
-position = Vector2(694, 634)
+position = Vector2(689, 608)
 rotation = 3.14159
 scale = Vector2(1.00954, 0.927076)
 script = ExtResource("6_evqe5")
@@ -500,7 +491,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico30" type="Area2D" parent="."]
 visible = false
-position = Vector2(694, 689)
+position = Vector2(689, 663)
 rotation = 3.14159
 scale = Vector2(1.00954, 0.927076)
 script = ExtResource("6_evqe5")
@@ -515,7 +506,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico31" type="Area2D" parent="."]
 visible = false
-position = Vector2(694, 745)
+position = Vector2(689, 719)
 rotation = 3.14159
 scale = Vector2(1.00954, 0.927076)
 script = ExtResource("6_evqe5")
@@ -530,7 +521,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico32" type="Area2D" parent="."]
 visible = false
-position = Vector2(694, 802)
+position = Vector2(689, 776)
 rotation = 3.14159
 scale = Vector2(1.00954, 0.927076)
 script = ExtResource("6_evqe5")
@@ -545,7 +536,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico33" type="Area2D" parent="."]
 visible = false
-position = Vector2(694, 857)
+position = Vector2(689, 831)
 rotation = 3.14159
 scale = Vector2(1.00954, 0.927076)
 script = ExtResource("6_evqe5")
@@ -560,7 +551,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico34" type="Area2D" parent="."]
 visible = false
-position = Vector2(694, 913)
+position = Vector2(689, 887)
 rotation = 3.14159
 scale = Vector2(1.00954, 0.927076)
 script = ExtResource("6_evqe5")
@@ -575,7 +566,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico35" type="Area2D" parent="."]
 visible = false
-position = Vector2(694, 968)
+position = Vector2(689, 942)
 rotation = 3.14159
 scale = Vector2(1.00954, 0.927076)
 script = ExtResource("6_evqe5")
@@ -590,7 +581,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico36" type="Area2D" parent="."]
 visible = false
-position = Vector2(694, 1023)
+position = Vector2(689, 997)
 rotation = 3.14159
 scale = Vector2(1.00954, 0.927076)
 script = ExtResource("6_evqe5")
@@ -605,7 +596,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico37" type="Area2D" parent="."]
 visible = false
-position = Vector2(694, 1079)
+position = Vector2(689, 1053)
 rotation = 3.14159
 scale = Vector2(1.00954, 0.927076)
 script = ExtResource("6_evqe5")
@@ -620,7 +611,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico38" type="Area2D" parent="."]
 visible = false
-position = Vector2(694, 1134)
+position = Vector2(689, 1108)
 rotation = 3.14159
 scale = Vector2(1.00954, 0.927076)
 script = ExtResource("6_evqe5")
@@ -635,7 +626,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico39" type="Area2D" parent="."]
 visible = false
-position = Vector2(694, 1189)
+position = Vector2(689, 1163)
 rotation = 3.14159
 scale = Vector2(1.00954, 0.927076)
 script = ExtResource("6_evqe5")
@@ -650,7 +641,7 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 
 [node name="Pico40" type="Area2D" parent="."]
 visible = false
-position = Vector2(694, 1241)
+position = Vector2(689, 1215)
 rotation = 3.14159
 scale = Vector2(1.00954, 0.927076)
 script = ExtResource("6_evqe5")
@@ -666,8 +657,6 @@ polygon = PackedVector2Array(0, 0, -29276.9, -156.715, 0, -307.627)
 [connection signal="pressed" from="Tap" to="Jugador" method="_on_tap_pressed"]
 [connection signal="body_entered" from="DeathZone2" to="." method="_on_death_zone_body_entered"]
 [connection signal="body_entered" from="DeathZone" to="." method="_on_death_zone_body_entered"]
-[connection signal="pressed" from="MenuPartida/Reinicio" to="." method="_on_reinicio_pressed"]
-[connection signal="pressed" from="MenuPartida/Menu" to="." method="_on_menu_pressed"]
 [connection signal="body_entered" from="Pico1" to="Pico1" method="_on_body_entered"]
 [connection signal="body_entered" from="Pico2" to="Pico2" method="_on_body_entered"]
 [connection signal="body_entered" from="Pico3" to="Pico3" method="_on_body_entered"]
