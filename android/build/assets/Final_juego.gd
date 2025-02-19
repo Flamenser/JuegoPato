@@ -36,8 +36,12 @@ func on_rewarded_ad_loaded(rewarded_ad : RewardedAd) -> void:
 	self.rewarded_ad = rewarded_ad
 
 func on_user_earned_reward(rewarded_item : RewardedItem):
-	print("on_user_earned_reward, rewarded_item: rewarded", rewarded_item.amount, rewarded_item.type)	
+	print("on_user_earned_reward, rewarded_item: rewarded", rewarded_item.amount, rewarded_item.type)
+	get_tree().paused = false
 	Global.monedaspartida = Global.monedaspartida * 2
+	Global.monedas += Global.monedaspartida
+	Save.saveValue("Menu", "monedas", Global.monedas)
+	get_tree().change_scene_to_file("res://Menu.tscn")
 	
 func _on_ver_anuncio_pressed():
 	
@@ -81,7 +85,6 @@ func _on_menu_pressed():
 
 
 func _on_duplicar_pressed():
-	
 	self.rewarded_ad = rewarded_ad
 	rewarded_ad.show(on_user_earned_reward_listener)
 	rewarded_ad.destroy()

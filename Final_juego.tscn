@@ -30,7 +30,7 @@ offset_left = -7.0
 offset_top = 205.0
 offset_right = 136.0
 offset_bottom = 266.0
-text = "Reiniciar"
+text = "Restart "
 metadata/_edit_use_anchors_ = true
 
 [node name="Menu" type="Button" parent="."]
@@ -39,7 +39,7 @@ offset_left = -7.0
 offset_top = 298.0
 offset_right = 136.0
 offset_bottom = 359.0
-text = "Menú"
+text = "Menu"
 metadata/_edit_use_anchors_ = true
 
 [node name="Duplicar" type="Button" parent="."]
@@ -48,8 +48,7 @@ offset_left = -5.0
 offset_top = 110.0
 offset_right = 138.0
 offset_bottom = 171.0
-text = "Duplicar 
-monedas"
+text = "x2 coins"
 metadata/_edit_use_anchors_ = true
 
 [node name="Refresh" type="Timer" parent="."]

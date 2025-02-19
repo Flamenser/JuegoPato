@@ -1,0 +1,53 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.godot.game-mergeDebugResources-20:/values-pt/values-pt.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\jesus\\.gradle\\caches\\transforms-3\\fd52ef132b67002a1ec2ee62526f5a1b\\transformed\\core-1.8.0\\res\\values-pt\\values-pt.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "7",
+                        "startColumns": "4",
+                        "startOffsets": "550",
+                        "endColumns": "100",
+                        "endOffsets": "646"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jesus\\.gradle\\caches\\transforms-3\\a8a61bf313501103c4f93c9eb4e08966\\transformed\\browser-1.4.0\\res\\values-pt\\values-pt.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,170,269,381",
+                        "endColumns": "114,98,111,105",
+                        "endOffsets": "165,264,376,482"
+                    }
+                },
+                {
+                    "source": "F:\\juegoceltappato\\JuegoPato\\android\\build\\res\\values-pt\\godot_project_name_string.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "1",
+                        "startOffsets": "112",
+                        "endColumns": "59",
+                        "endOffsets": "170"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "487",
+                        "endColumns": "62",
+                        "endOffsets": "545"
+                    }
+                }
+            ]
+        }
+    ]
+}

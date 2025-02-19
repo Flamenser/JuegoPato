@@ -1,24 +1,24 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1739875733
-export_presets.cfg::TextFile::-1::1739828724::0::1::::<><>::
-Final_juego.tscn::PackedScene::6482068469385763301::1739875733::0::1::::<><>::res://Final_juego.gd<>uid://4iw2cg58i8fi::::res://Letra.tres<>uid://c0l6iqcgnsrms::::res://Imagenes/moneda.png
+::res://::1739909512
+export_presets.cfg::TextFile::-1::1739879224::0::1::::<><>::
+Final_juego.gd::GDScript::-1::1739877631::0::1::::<>Node2D<>::
+Final_juego.tscn::PackedScene::6482068469385763301::1739879237::0::1::::<><>::res://Final_juego.gd<>uid://4iw2cg58i8fi::::res://Letra.tres<>uid://c0l6iqcgnsrms::::res://Imagenes/moneda.png
 Fondotransparente.tres::LabelSettings::4213104150805055119::1739868012::0::1::::<><>::
 Global.gd::GDScript::-1::1739868001::0::1::::<>Node<>::
 grischido.tres::LabelSettings::2595992773264718730::1739868012::0::1::::<><>::
 icon.svg::CompressedTexture2D::8887980079877972278::1735515756::1739861302::1::::<><>::
-Juego.gd::GDScript::-1::1739875581::0::1::::<>Node2D<>::
-Juego.tscn::PackedScene::4091762584950163414::1739875733::0::1::::<><>::uid://c23rh12mphlbe::::res://Imagenes/Fondo chido.png<>res://Juego.gd<>res://Jugador.gd<>uid://b1a4hes3cural::::res://Fondotransparente.tres<>uid://b3fhpwsgboejj::::res://Imagenes/patobase.png<>uid://cf8qqxfir7nnp::::res://Imagenes/Fondo arriba.png<>uid://bnymkrn7juank::::res://Imagenes/Fondo abajo.png<>uid://bg60rowr68wrg::::res://Imagenes/pico.png<>res://Pico.gd<>uid://cyl7yrcm3ri1j::::res://Final_juego.tscn<>uid://c4ojenm6fi731::::res://Imagenes/boton.png
+Juego.gd::GDScript::-1::1739876806::0::1::::<>Node2D<>::
+Juego.tscn::PackedScene::4091762584950163414::1739879236::0::1::::<><>::uid://c23rh12mphlbe::::res://Imagenes/Fondo chido.png<>res://Juego.gd<>res://Jugador.gd<>uid://b1a4hes3cural::::res://Fondotransparente.tres<>uid://b3fhpwsgboejj::::res://Imagenes/patobase.png<>uid://cf8qqxfir7nnp::::res://Imagenes/Fondo arriba.png<>uid://bnymkrn7juank::::res://Imagenes/Fondo abajo.png<>uid://bg60rowr68wrg::::res://Imagenes/pico.png<>res://Pico.gd<>uid://cyl7yrcm3ri1j::::res://Final_juego.tscn
 Jugador.gd::GDScript::-1::1739874971::0::1::::<>CharacterBody2D<>::
 Letra.tres::LabelSettings::2053375593534753094::1739868012::0::1::::<><>::
 Menu.gd::GDScript::-1::1739863310::0::1::::<>Node<>::
-Menu.tscn::PackedScene::3245291322609522372::1739875733::0::1::::<><>::res://Menu.gd<>uid://c23rh12mphlbe::::res://Imagenes/Fondo chido.png<>uid://c4ojenm6fi731::::res://Imagenes/boton.png<>uid://4iw2cg58i8fi::::res://Letra.tres<>uid://c0l6iqcgnsrms::::res://Imagenes/moneda.png<>uid://bc8rvexfit1x3::::res://grischido.tres
-Moneda.gd::GDScript::-1::1739786860::0::1::::<>Node2D<>::
-Moneda.tscn::PackedScene::4153408650228517530::1739875733::0::1::::<><>::res://Moneda.gd<>uid://c0l6iqcgnsrms::::res://Imagenes/moneda.png
+Menu.tscn::PackedScene::3245291322609522372::1739879236::0::1::::<><>::res://Menu.gd<>uid://c23rh12mphlbe::::res://Imagenes/Fondo chido.png<>uid://c4ojenm6fi731::::res://Imagenes/boton.png<>uid://4iw2cg58i8fi::::res://Letra.tres<>uid://c0l6iqcgnsrms::::res://Imagenes/moneda.png<>uid://bc8rvexfit1x3::::res://grischido.tres
+Moneda.gd::GDScript::-1::1739876807::0::1::::<>Node2D<>::
+Moneda.tscn::PackedScene::4153408650228517530::1739879236::0::1::::<><>::res://Moneda.gd<>uid://c0l6iqcgnsrms::::res://Imagenes/moneda.png
 Pico.gd::GDScript::-1::1739873046::0::1::::<>Area2D<>::
-Final_juego.gd::GDScript::-1::1739874118::0::1::::<>Node2D<>::
 Save.gd::GDScript::-1::1739863043::0::1::::<>Node<>::
 Tienda.gd::GDScript::-1::1739859968::0::1::::<>Node2D<>::
-Tienda.tscn::PackedScene::3629331599787806981::1739875733::0::1::::<><>::res://Tienda.gd<>uid://c23rh12mphlbe::::res://Imagenes/Fondo chido.png<>uid://c0l6iqcgnsrms::::res://Imagenes/moneda.png<>uid://c4ojenm6fi731::::res://Imagenes/boton.png<>uid://4iw2cg58i8fi::::res://Letra.tres<>uid://c714oyv0oh8sa::::res://Imagenes/pato1.png<>uid://wehrqmkb7psl::::res://Imagenes/pato2.png
+Tienda.tscn::PackedScene::3629331599787806981::1739879236::0::1::::<><>::res://Tienda.gd<>uid://c23rh12mphlbe::::res://Imagenes/Fondo chido.png<>uid://c0l6iqcgnsrms::::res://Imagenes/moneda.png<>uid://c4ojenm6fi731::::res://Imagenes/boton.png<>uid://4iw2cg58i8fi::::res://Letra.tres<>uid://c714oyv0oh8sa::::res://Imagenes/pato1.png<>uid://wehrqmkb7psl::::res://Imagenes/pato2.png
 ::res://addons/::1739867297
 ::res://addons/admob/::1739867300
 admob.gd::GDScript::-1::1739867297::0::1::::AdMobEditorPlugin<>EditorPlugin<>::
@@ -51,7 +51,15 @@ orange_juice_2_0.ttf::FontFile::3841211026359280774::1739867297::1739867300::1::
 ERR_001.md::TextFile::-1::1739867298::0::1::::<><>::
 ERR_002.md::TextFile::-1::1739867298::0::1::::<><>::
 ::res://addons/admob/downloads/::1739867298
-::res://addons/admob/downloads/android/::1739867298
+::res://addons/admob/downloads/android/::1739878319
+::res://addons/admob/downloads/android/adcolony/::1725347756
+::res://addons/admob/downloads/android/adcolony/poing-godot-admob-libs/::1725347756
+::res://addons/admob/downloads/android/ads/::1725347756
+::res://addons/admob/downloads/android/ads/poing-godot-admob-libs/::1725347756
+::res://addons/admob/downloads/android/meta/::1725347756
+::res://addons/admob/downloads/android/meta/poing-godot-admob-libs/::1725347756
+::res://addons/admob/downloads/android/vungle/::1725347756
+::res://addons/admob/downloads/android/vungle/poing-godot-admob-libs/::1725347756
 ::res://addons/admob/downloads/ios/::1739867298
 ::res://addons/admob/sample/::1739867298
 Banner.gd::GDScript::-1::1739867298::0::1::::<>VBoxContainer<>::
@@ -123,7 +131,10 @@ ConsentDebugSettings.gd::GDScript::-1::1739867300::0::1::::ConsentDebugSettings<
 ConsentRequestParameters.gd::GDScript::-1::1739867300::0::1::::ConsentRequestParameters<>RefCounted<>::
 DebugGeography.gd::GDScript::-1::1739867300::0::1::::DebugGeography<>RefCounted<>::
 FormError.gd::GDScript::-1::1739867300::0::1::::FormError<>RefCounted<>::
-::res://android/::1739764977
+::res://android/::1739878472
+::res://android/plugins/::1739878475
+::res://android/plugins/poing-godot-admob-libs/::1739878475
+::res://Apk/::1739878188
 ::res://Imagenes/::1739875824
 Banner.png::CompressedTexture2D::6250027785946686647::1739829521::1739829522::1::::<><>::
 boton.png::CompressedTexture2D::6837773420313232962::1735526900::1735526912::1::::<><>::
